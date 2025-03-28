@@ -1,11 +1,10 @@
-/* Reset default spacing and box-sizing */
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
@@ -13,7 +12,6 @@ body {
   color: #333;
 }
 
-/* Links */
 a {
   color: #0066cc;
   text-decoration: none;
@@ -24,33 +22,32 @@ a:hover {
   color: #004799;
 }
 
-/* Navigation Bar */
+/* NAVBAR */
 .navbar {
   background-color: #2c3e50;
-  padding: 10px 0;
+  height: 50px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .nav-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  width: 100%;
   gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .nav-link {
   color: white;
-  background-color: #34495e;
-  padding: 10px 18px;
-  border-radius: 8px;
+  padding: 10px 16px;
+  border-radius: 6px;
   font-weight: 500;
+  background-color: #34495e;
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
@@ -59,13 +56,13 @@ a:hover {
   background-color: #1a252f;
 }
 
-/* Header */
+/* HEADER */
 header {
   background: linear-gradient(135deg, #2c3e50, #34495e);
   color: white;
   text-align: center;
-  padding: 100px 20px 60px 20px; /* Top padding accounts for navbar */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 100px 20px 60px 20px; /* accounts for navbar height */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -80,7 +77,7 @@ header p {
   color: #dcdcdc;
 }
 
-/* Sections */
+/* SECTIONS */
 section {
   max-width: 800px;
   margin: 40px auto;
@@ -120,7 +117,7 @@ ul li::before {
   margin-right: 4px;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
   text-align: center;
   margin: 50px 0 20px;
@@ -128,7 +125,7 @@ footer {
   color: #888;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 600px) {
   header h1 {
     font-size: 2.2rem;
@@ -141,7 +138,7 @@ footer {
 
   .nav-container {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
 
   .nav-link {
