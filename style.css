@@ -38,7 +38,11 @@ a:hover {
 .nav-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .nav-link {
@@ -60,7 +64,7 @@ header {
   background: linear-gradient(135deg, #2c3e50, #34495e);
   color: white;
   text-align: center;
-  padding: 100px 20px 60px 20px; /* Extra top padding to account for fixed navbar */
+  padding: 100px 20px 60px 20px; /* Top padding accounts for navbar */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -81,5 +85,66 @@ section {
   max-width: 800px;
   margin: 40px auto;
   background: white;
-  padding: 30px
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+section:hover {
+  transform: translateY(-2px);
+}
+
+section h2 {
+  margin-bottom: 16px;
+  font-size: 1.8rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 6px;
+}
+
+section p,
+section li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "• ";
+  color: #007acc;
+  margin-right: 4px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin: 50px 0 20px;
+  font-size: 0.95rem;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  section {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-link {
+    display: inline-block;
+  }
 }
